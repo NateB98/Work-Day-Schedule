@@ -9,9 +9,9 @@ var row6 = document.querySelector('#hour-5')
 var row7 = document.querySelector('#hour-6')
 var row8 = document.querySelector('#hour-7')
 var row9 = document.querySelector('#hour-8')
+var description = document.querySelectorAll('.description')
 
-
-$("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+$("#currentDay").text(moment().format("MMMM Do , h:mm:ss a"));
 
 
 $('#hour-0 .description').val(localStorage.getItem('hour-0'));
@@ -24,9 +24,16 @@ $('#hour-6 .description').val(localStorage.getItem('hour-6'));
 $('#hour-7 .description').val(localStorage.getItem('hour-7'));
 $('#hour-8 .description').val(localStorage.getItem('hour-8'));
 
+$(document).ready(function(){
+    $('.saveBtn').on("click", function() {
+        localStorage.setItem(description, $('.description').val());
+        console.log(localStorage.getItem(description));
+    })
+});
+
 function timeTracker () {
     var currentHour = moment().hour()
-    $(".time-row").each(function () {
+    $(".time-rows").each(function () {
         var rowHour = parseInt($(this).attr("id").split("hour")[1]);
         console.log( rowHour, currentHour)
     })

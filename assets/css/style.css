@@ -25,7 +25,7 @@ body {
     white-space: pre-wrap;
   }
   
-  .time-block{
+  .time-rows{
     text-align: center;
     border-radius: 15px;
   }
@@ -40,21 +40,22 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    border-left: 1px dashed #000000;
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #6b6868;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
-    color: white;
+    background-color: #6bf159;
+    color: rgb(0, 0, 0);
   }
   
   .future {
-    background-color: #77dd77;
-    color: white;
+    background-color: #77dfdf;
+    color: rgb(0, 0, 0);
   }
   
   .saveBtn {
